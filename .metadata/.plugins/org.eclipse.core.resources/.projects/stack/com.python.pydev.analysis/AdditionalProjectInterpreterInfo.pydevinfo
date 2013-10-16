@@ -1,0 +1,45 @@
+-- VERSION_3
+-- START DISKCACHE
+/home/yi/workspace2/.metadata/.plugins/org.eclipse.core.resources/.projects/stack/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+db|0|/home/yi/workspace2/stack/db.py
+manager|0|/home/yi/workspace2/stack/manager.py
+main|0|/home/yi/workspace2/stack/main.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+7=ComunicateServer.run
+8=ListenServer.run
+3=db
+2=manager
+4=ListenServer
+9=ListenServer.__init__
+6=ComunicateServer.__init__
+5=ComunicateServer
+1=main
+-- END DICTIONARY
+-- START TREE 1
+9
+asv|1|asvr!11@
+com|1|ComunicateServer!9@
+get|2|getFlavor!18@getImage!18@
+lis|1|ListenServer!9@
+max|1|MAXTHREADS!11@
+por|1|PORT!11@
+rec|1|RECVBUFLEN!11@
+ser|1|SERVER!11@
+use|1|userAuth!26@
+-- END TREE
+-- START TREE 2
+10
+__i|2|__init__!4&10@__init__!5&10@
+add|1|address!6&11@
+asv|0|
+aut|1|authFlag!6&11@
+hos|2|host!7&11@host!6&11@
+num|1|num!6&11@
+pas|2|passwd!7&11@passwd!6&11@
+run|2|run!4&10@run!5&10@
+soc|3|socket!8&11@socket!9&11@socket!6&11@
+use|2|username!7&11@username!6&11@
+-- END TREE

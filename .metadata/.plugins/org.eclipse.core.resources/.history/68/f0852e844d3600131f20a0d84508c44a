@@ -1,0 +1,3 @@
+def getFlavor(username, passwd, host):
+    
+def getImage(username, passwd, host):
