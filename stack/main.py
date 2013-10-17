@@ -44,6 +44,16 @@ class ComunicateServer(threading.Thread):
                         self.host = res
                         self.socket.send(1)
             
+            #userreg: format--reg@user@passwd
+            if command == 'reg':
+                if self.authFlag == 1:
+                    self.socket.send(2)
+                else:
+                    username = commandList[1]
+                    passwd = commandList[2]
+                    res = db.userAdd(username, passwd)
+                    self.socket.send(res)
+            
             #flavor: format--flavor
             if command == 'flavor':
                 if self.authFlag == 0:
@@ -59,7 +69,16 @@ class ComunicateServer(threading.Thread):
                 else:
                     res = manager.getImage(self.username, self.passwd, self.host)
                     self.socket.send(res)
-            #createvm: formant--createvm@vmname@
+            #createvm: formant--createvm@vmname@imagename@flavorname
+            if command == 'createvm':
+                if self.authFlag == 0:
+                    self.socket.send(0)
+                else:
+                    vmname = commandList[1]
+                    imagename = commandList[2]
+                    flavorname = commandList[3]
+                    res = manager.createVM(self.username, self.passwd, self.host, vmname, imagename, flavorname)
+                    self.socket.send(res)
             
             self.socket.send('[%s] %s %s' % (ctime(), data, self.address))
         self.socket.close()
